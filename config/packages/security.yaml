@@ -24,11 +24,10 @@ security:
                 failure_handler:
                     lexik_jwt_authentication.handler.authentication_failure
                 require_previous_session: false
-
         api:
-            pattern: ^/api
+            pattern: ^/api/*
             stateless: true
-            anonymous: false
+            anonymous: true
             provider: usuario
             guard:
                 authenticators:
@@ -50,14 +49,11 @@ security:
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-        - { path: ^/api/login_check, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/api/login_check, roles: IS_AUTHENTICATED_ANONYMOUSLY}
         - { path: ^/register, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/api/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/api,       roles: IS_AUTHENTICATED_FULLY }
-
-
-
-
+#        - { path: ^/api/*,       roles: IS_AUTHENTICATED_FULLY }
+        - { path: ^/api/*, roles: IS_AUTHENTICATED_ANONYMOUSLY }
 
 
 

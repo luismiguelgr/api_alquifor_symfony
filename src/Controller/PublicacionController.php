@@ -35,7 +35,14 @@ class PublicacionController extends AbstractController
             $data []= [
                 'id' => $publicacion->getId(),
                 'titulo' => $publicacion->getTitulo(),
-                'autor' => $publicacion->getUsuario()->getNombre()
+                'autor' => $publicacion->getUsuario()->getNombre(),
+                'foto' => $publicacion->getFoto(),
+                'descripcion' => $publicacion->getDescripcion(),
+                'pros' => $publicacion->getPros(),
+                'contras' => $publicacion->getContras(),
+                'visitas' => $publicacion->getVisitas(),
+                'created_at' => $publicacion->getCreatedAt(),
+                'updated_at' => $publicacion->getUpdatedAt(),
             ];
         }
 
@@ -62,8 +69,15 @@ class PublicacionController extends AbstractController
         }else {
             $data = [
                 'id' => $publicacion->getId(),
-                'email' => $publicacion->getTitulo(),
-                'autor' => $publicacion->getUsuario()->getNombre()
+                'titulo' => $publicacion->getTitulo(),
+                'autor' => $publicacion->getUsuario()->getNombre(),
+                'foto' => $publicacion->getFoto(),
+                'descripcion' => $publicacion->getDescripcion(),
+                'pros' => $publicacion->getPros(),
+                'contras' => $publicacion->getContras(),
+                'visitas' => $publicacion->getVisitas(),
+                'created_at' => $publicacion->getCreatedAt(),
+                'updated_at' => $publicacion->getUpdatedAt(),
             ];
 
             return $this->response($data, 200);
