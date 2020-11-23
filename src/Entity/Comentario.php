@@ -24,6 +24,11 @@ class Comentario
     private $texto;
 
     /**
+     * @ORM\Column(type="datetime")
+     */
+    private $fecha_creacion;
+
+    /**
      * @ORM\ManyToOne(targetEntity="Usuario", inversedBy="comentarios")
      * @ORM\JoinColumn(name="id_usuario", referencedColumnName="id", nullable=false)
      */
@@ -49,6 +54,18 @@ class Comentario
     public function setTexto(string $texto): self
     {
         $this->texto = $texto;
+
+        return $this;
+    }
+
+    public function getFechaCreacion(): ?\DateTime
+    {
+        return $this->fecha_creacion;
+    }
+
+    public function setFechaCreacion(\DateTime $fecha_creacion): self
+    {
+        $this->fecha_creacion = $fecha_creacion;
 
         return $this;
     }

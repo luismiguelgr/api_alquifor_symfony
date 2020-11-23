@@ -35,12 +35,13 @@ class Publicacion
     private $foto;
 
     /**
-     * @ORM\Column(type="array", nullable=true)
+     * @ORM\Column(type="simple_array", nullable=true)
      */
+
     private $pros;
 
     /**
-     * @ORM\Column(type="array", nullable=true)
+     * @ORM\Column(type="simple_array", nullable=true)
      */
     private $contras;
 
@@ -73,8 +74,8 @@ class Publicacion
 
     public function __construct()
     {
-        $this->contras = array();
-        $this->pros = array();
+        $this->contras = array("");
+        $this->pros = array("");
         $this->comentarios = new ArrayCollection();
     }
 
@@ -109,7 +110,9 @@ class Publicacion
 
     public function getFoto(): ?string
     {
-        return $this->foto;
+//        return  "http://10.0.2.2:80/uploads/" . $this->foto;
+//        return  "10.0.2.2:80/uploads/" . $this->foto;
+        return  "http://192.168.1.35/uploads/" . $this->foto;
     }
 
     public function setFoto(?string $foto): self
