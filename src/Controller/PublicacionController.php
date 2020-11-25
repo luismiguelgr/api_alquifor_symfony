@@ -54,6 +54,37 @@ class PublicacionController extends AbstractController
      * @param $id
      * @return JsonResponse
      * @throws \Exception
+     * @Route("/publicaciones/{id}", name="getAllPublicacionesUsuario", methods={"POST"})
+     */
+    public function getPublicacionesUsuario($id): JsonResponse
+    {
+
+        $publicaciones = $this->getDoctrine()->getRepository(Publicacion::class)->findBy(array('usuario' => $id), array('updated_at' => 'DESC'));
+        $data = [];
+
+        foreach ($publicaciones as $publicacion) {
+            $data []= [
+                'id' => $publicacion->getId(),
+                'titulo' => $publicacion->getTitulo(),
+                'autor' => $publicacion->getUsuario()->getNombre(),
+                'foto' => $publicacion->getFoto(),
+                'descripcion' => $publicacion->getDescripcion(),
+                'pros' => $publicacion->getPros(),
+                'contras' => $publicacion->getContras(),
+                'visitas' => $publicacion->getVisitas(),
+                'created_at' => $publicacion->getCreatedAt()->format("Y-m-d H:m:s"),
+                'updated_at' => $publicacion->getUpdatedAt()->format("Y-m-d H:m:s")
+            ];
+        }
+
+        return new JsonResponse($data, Response::HTTP_OK);
+
+    }
+
+    /**
+     * @param $id
+     * @return JsonResponse
+     * @throws \Exception
      * @Route("/publicacion/{id}", name="getPublicacion", methods={"GET"})
      */
     public function getPublicacion($id): JsonResponse

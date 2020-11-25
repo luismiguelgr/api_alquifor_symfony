@@ -229,6 +229,51 @@ class UsuarioController extends AbstractController
     }
 
     /**
+     * @param Request $request
+     * @return JsonResponse
+     * @throws \Exception
+     * @Route("/usuario/login", name="loginUsuario", methods={"POST"})
+     */
+    public function login(Request $request)
+    {
+        $request = $this->transformJsonBody($request);
+
+        if (!$request){
+            throw new \Exception();
+        }
+        $usuario= $this->getDoctrine()->getRepository(Usuario::class)->findOneBy(array('usuario' => $request->get('usuario')));
+
+        if(!$usuario){
+            $data = [
+                'status' => 404,
+                'error' => "Usuario no encontrado",
+            ];
+            return $this->response($data, 404);
+        }
+
+        if($usuario->getEmail() == $request->get('email')){
+
+            $data = [
+                'id' => $usuario->getId(),
+                'nombre' => $usuario->getNombre(),
+                'usuario' => $usuario->getUsuario(),
+                'email' => $usuario->getEmail(),
+            ];
+
+            return $this->response($data, 200);
+        }else{
+            $data = [
+                'status' => 401,
+                'error' => "Usuario no correcto",
+            ];
+            return $this->response($data, 401);
+        }
+
+
+
+    }
+
+    /**
      * Returns a JSON response
      *
      * @param array $data

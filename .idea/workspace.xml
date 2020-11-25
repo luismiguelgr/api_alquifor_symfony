@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae90d4cd-55b2-4eba-9c58-09ff32cfac22" name="Default Changelist" comment="Valores devueltos de publicaciones">
+    <list default="true" id="ae90d4cd-55b2-4eba-9c58-09ff32cfac22" name="Default Changelist" comment="Respondiendo todo">
       <change afterPath="$PROJECT_DIR$/public/uploads/Foto_publicacion_2020-00-22_cd69dbcf-aa25-43e5-a62e-efdda75f9115" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/uploads/Foto_publicacion_2020-22-23_7bb99426-a5a8-4ae4-ba4e-a37a95492269" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/uploads/Foto_publicacion_2020-30-23_c237f482-2a15-459d-a80c-5901721097f7" afterDir="false" />
@@ -36,13 +36,8 @@
       <change afterPath="$PROJECT_DIR$/public/uploads/casa_nueva.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/uploads/casa_prueba.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/doctrine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/doctrine.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ApiController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/PublicacionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PublicacionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Comentario.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Comentario.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Publicacion.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Publicacion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UsuarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UsuarioController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +205,8 @@
       <workItem from="1605889196677" duration="9529000" />
       <workItem from="1605974844378" duration="4682000" />
       <workItem from="1606036286945" duration="10191000" />
-      <workItem from="1606156205693" duration="1829000" />
+      <workItem from="1606156205693" duration="2537000" />
+      <workItem from="1606331043147" duration="3195000" />
     </task>
     <task id="LOCAL-00001" summary="Valores devueltos de publicaciones">
       <created>1605461201455</created>
@@ -219,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605461201455</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Respondiendo todo">
+      <created>1606159659645</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1606159659645</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,7 +243,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Valores devueltos de publicaciones" />
-    <option name="LAST_COMMIT_MESSAGE" value="Valores devueltos de publicaciones" />
+    <MESSAGE value="Respondiendo todo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Respondiendo todo" />
   </component>
   <component name="WindowStateProjectService">
     <state x="716" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605436091312">
@@ -261,10 +265,10 @@
     <state x="2356" y="165" key="SettingsEditor/46.27.1874.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605856269768" />
     <state x="472" y="188" key="SettingsEditor/46.27.1874.1053/1920.0.1920.1080@46.27.1874.1053" timestamp="1605373237272" />
     <state x="472" y="188" width="1022" height="737" key="SettingsEditor/46.27.1874.1053@46.27.1874.1053" timestamp="1605369337684" />
-    <state x="578" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1605461214937">
+    <state x="578" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1606159667939">
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
-    <state x="578" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/46.27.1874.1053/1920.0.1920.1080@46.27.1874.1053" timestamp="1605461214937" />
+    <state x="578" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/46.27.1874.1053/1920.0.1920.1080@46.27.1874.1053" timestamp="1606159667939" />
     <state x="455" y="234" width="1100" height="522" key="find.popup" timestamp="1605976506324">
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
