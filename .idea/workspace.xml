@@ -20,24 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ae90d4cd-55b2-4eba-9c58-09ff32cfac22" name="Default Changelist" comment="Respondiendo todo">
-      <change afterPath="$PROJECT_DIR$/public/uploads/Foto_publicacion_2020-00-22_cd69dbcf-aa25-43e5-a62e-efdda75f9115" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/Foto_publicacion_2020-22-23_7bb99426-a5a8-4ae4-ba4e-a37a95492269" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/Foto_publicacion_2020-30-23_c237f482-2a15-459d-a80c-5901721097f7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/Foto_publicacion_2020-35-22 06:35:20c8d766ca-182b-4988-904a-ad3ad3c6bc1a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/Foto_publicacion_2020-36-22dd040ab8-1631-42e4-82ba-84b0b4b4ef90" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/Foto_publicacion_2020-52-23_b12a839a-a662-460f-817a-0443138b9c88" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/Foto_publicacion_2020-53-22_f5bc22b2-e208-4e81-b583-8284b394aa63" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/Foto_publicacion_2020-54-23_e1de181e-3846-45cc-a01d-38b2ef40edf5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/Foto_publicacion_2020-56-22_10992519-44d2-4d7b-a83b-c2e64bf2a22e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/Foto_publicacion_2020-58-22_88b3c5ed-b918-44b4-89b9-0f9c3e3ac980" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/Foto_publicacion_57e56326-ad24-4918-88ee-069c7fa8dad0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/Foto_publicacion_d24591b5-a3b9-4ce4-8368-09a3aec9b169" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/Foto_publicacion_null" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/casa_nueva.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/casa_prueba.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/PublicacionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PublicacionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UsuarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UsuarioController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ComentarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ComentarioController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +190,9 @@
       <workItem from="1605974844378" duration="4682000" />
       <workItem from="1606036286945" duration="10191000" />
       <workItem from="1606156205693" duration="2537000" />
-      <workItem from="1606331043147" duration="3195000" />
+      <workItem from="1606331043147" duration="3230000" />
+      <workItem from="1606402651966" duration="4000" />
+      <workItem from="1606422022031" duration="1554000" />
     </task>
     <task id="LOCAL-00001" summary="Valores devueltos de publicaciones">
       <created>1605461201455</created>

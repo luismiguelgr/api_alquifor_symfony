@@ -45,6 +45,32 @@ class ComentarioController extends AbstractController
      * @param $id
      * @return JsonResponse
      * @throws \Exception
+     * @Route("/comentarios/{id}", name="getAllComentariosUsuario", methods={"POST"})
+     */
+    public function getComentariosUsuario($id): JsonResponse
+    {
+
+        $comentarios = $this->getDoctrine()->getRepository(Comentario::class)->findBy(array('usuario' => $id), array('fecha_creacion' => 'DESC'));
+        $data = [];
+
+        foreach ($comentarios as $comentario) {
+            $data []= [
+                'id' => $comentario->getId(),
+                'texto' => $comentario->getTexto(),
+                'fecha_creacion' => $comentario->getFechaCreacion()->format("Y-m-d H:m:s"),
+                'usuario' => $comentario->getUsuario()->getNombre(),
+                'id_publicacion' => $comentario->getPublicacion()->getId()
+            ];
+        }
+
+        return new JsonResponse($data, Response::HTTP_OK);
+
+    }
+
+    /**
+     * @param $id
+     * @return JsonResponse
+     * @throws \Exception
      * @Route("/comentario/{id}", name="getComentario", methods={"GET"})
      */
     public function getComentario($id): JsonResponse
@@ -178,7 +204,7 @@ class ComentarioController extends AbstractController
         if(!$comentario){
             $data = [
                 'status' => 404,
-                'error' => "Comentario no encontrada",
+                'error' => "Comentario no encontrado",
             ];
             return $this->response($data, 404);
         }
