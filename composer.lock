@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8eec67b6bab7a492188bd5e52408c21a",
+    "content-hash": "4079ef6624f727c983ebd6f4d868da8b",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -1977,23 +1977,23 @@
         },
         {
             "name": "lexik/jwt-authentication-bundle",
-            "version": "dev-master",
+            "version": "v2.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lexik/LexikJWTAuthenticationBundle.git",
-                "reference": "3974427f7d47731f97bda8dd09cedbd47715e720"
+                "reference": "3c9f4e7f5a0e0817de2dd88ae8347d4da4b0c57b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lexik/LexikJWTAuthenticationBundle/zipball/3974427f7d47731f97bda8dd09cedbd47715e720",
-                "reference": "3974427f7d47731f97bda8dd09cedbd47715e720",
+                "url": "https://api.github.com/repos/lexik/LexikJWTAuthenticationBundle/zipball/3c9f4e7f5a0e0817de2dd88ae8347d4da4b0c57b",
+                "reference": "3c9f4e7f5a0e0817de2dd88ae8347d4da4b0c57b",
                 "shasum": ""
             },
             "require": {
                 "ext-openssl": "*",
                 "lcobucci/jwt": "^3.2",
                 "namshi/jose": "^7.2",
-                "php": "^5.6|^7.0",
+                "php": ">=5.6",
                 "symfony/framework-bundle": "^3.4|^4.0|^5.0",
                 "symfony/security-bundle": "^3.4|^4.0|^5.0"
             },
@@ -2009,7 +2009,6 @@
                 "gesdinet/jwt-refresh-token-bundle": "Implements a refresh token system over Json Web Tokens in Symfony",
                 "spomky-labs/lexik-jose-bridge": "Provides a JWT Token encoder with encryption support"
             },
-            "default-branch": true,
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -2072,7 +2071,7 @@
             ],
             "support": {
                 "issues": "https://github.com/lexik/LexikJWTAuthenticationBundle/issues",
-                "source": "https://github.com/lexik/LexikJWTAuthenticationBundle/tree/master"
+                "source": "https://github.com/lexik/LexikJWTAuthenticationBundle/tree/v2.10.0"
             },
             "funding": [
                 {
@@ -2080,7 +2079,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-11-14T11:07:48+00:00"
+            "time": "2020-11-23T15:31:35+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -8623,9 +8622,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "lexik/jwt-authentication-bundle": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
