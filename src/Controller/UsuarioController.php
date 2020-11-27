@@ -106,19 +106,20 @@ class UsuarioController extends AbstractController
             }
 
             $usuario = new Usuario();
-            empty($request->get('usuario')) ? true : $usuario->setUsuario($request->get('usuario'));
-            empty($request->get('password')) ? true : $usuario->setPassword($request->get('password'));
-            empty($request->get('email')) ? true : $usuario->setEmail($request->get('email'));
-            empty($request->get('nombre')) ? true : $usuario->setNombre($request->get('nombre'));
-            empty($request->get('primer_apellido')) ? true : $usuario->setPrimerApellido($request->get('primer_apellido'));
-            empty($request->get('segundo_apellido')) ? true : $usuario->setSegundoApellido($request->get('segundo_apellido'));
-            empty($request->get('fecha_nacimiento')) ? true : $usuario->setFechaNacimiento(new \DateTime($request->get('fecha_nacimiento')));
-            empty($request->get('direccion')) ? true : $usuario->setDireccion($request->get('direccion'));
-            empty($request->get('ciudad')) ? true : $usuario->setCiudad($request->get('ciudad'));
-            empty($request->get('provincia')) ? true : $usuario->setProvincia($request->get('provincia'));
-            empty($request->get('codigo_postal')) ? true : $usuario->setCodigoPostal($request->get('codigo_postal'));
-            empty($request->get('telefono')) ? true : $usuario->setTelefono($request->get('telefono'));
-            empty($request->get('imagen')) ? true : $usuario->setImagen($request->get('imagen'));
+            empty($request->get('usuario')) ? "" : $usuario->setUsuario($request->get('usuario'));
+            empty($request->get('password')) ? "" : $usuario->setPassword($request->get('password'));
+            empty($request->get('email')) ? "" : $usuario->setEmail($request->get('email'));
+            empty($request->get('nombre')) ? "" : $usuario->setNombre($request->get('nombre'));
+            empty($request->get('primer_apellido')) ? "" : $usuario->setPrimerApellido($request->get('primer_apellido'));
+            empty($request->get('segundo_apellido')) ? "" : $usuario->setSegundoApellido($request->get('segundo_apellido'));
+            empty($request->get('fecha_nacimiento')) ? "" : $usuario->setFechaNacimiento(new \DateTime($request->get('fecha_nacimiento')));
+            empty($request->get('direccion')) ? "" : $usuario->setDireccion($request->get('direccion'));
+            empty($request->get('ciudad')) ? "" : $usuario->setCiudad($request->get('ciudad'));
+            empty($request->get('provincia')) ? "" : $usuario->setProvincia($request->get('provincia'));
+            empty($request->get('codigo_postal')) ? 0 : $usuario->setCodigoPostal($request->get('codigo_postal'));
+            empty($request->get('telefono')) ? 0 : $usuario->setTelefono($request->get('telefono'));
+//            empty($request->get('imagen')) ? true : $usuario->setImagen($request->get('imagen'));
+            $usuario->setImagen("");
             $usuario->setTipoPerfil(1);
 
             $this->getDoctrine()->getRepository(Usuario::class)->addUsuario($usuario);
@@ -180,8 +181,8 @@ class UsuarioController extends AbstractController
             empty($request->get('provincia')) ? true : $usuario->setProvincia($request->get('provincia'));
             empty($request->get('codigo_postal')) ? true : $usuario->setCodigoPostal($request->get('codigo_postal'));
             empty($request->get('telefono')) ? true : $usuario->setTelefono($request->get('telefono'));
-            empty($request->get('imagen')) ? true : $usuario->setImagen($request->get('imagen'));
-
+//            empty($request->get('imagen')) ? true : $usuario->setImagen($request->get('imagen'));
+            $usuario->setImagen("");
             $this->getDoctrine()->getRepository(Usuario::class)->updateUsuario($usuario);
 
             $data = [
@@ -298,5 +299,6 @@ class UsuarioController extends AbstractController
 
         return $request;
     }
+
 
 }

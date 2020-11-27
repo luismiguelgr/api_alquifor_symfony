@@ -21,7 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ae90d4cd-55b2-4eba-9c58-09ff32cfac22" name="Default Changelist" comment="Respondiendo todo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ComentarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ComentarioController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UsuarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UsuarioController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Usuario.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +193,8 @@
       <workItem from="1606156205693" duration="2537000" />
       <workItem from="1606331043147" duration="3230000" />
       <workItem from="1606402651966" duration="4000" />
-      <workItem from="1606422022031" duration="1554000" />
+      <workItem from="1606422022031" duration="2176000" />
+      <workItem from="1606492807689" duration="2585000" />
     </task>
     <task id="LOCAL-00001" summary="Valores devueltos de publicaciones">
       <created>1605461201455</created>
@@ -264,10 +266,10 @@
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
     <state x="647" y="252" key="run.anything.popup/46.27.1874.1053/1920.0.1920.1080@46.27.1874.1053" timestamp="1605435707171" />
-    <state x="646" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1606038572347">
+    <state x="646" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1606426667869">
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
-    <state x="646" y="259" width="672" height="678" key="search.everywhere.popup/46.27.1874.1053/1920.0.1920.1080@46.27.1874.1053" timestamp="1606038572347" />
+    <state x="646" y="259" width="672" height="678" key="search.everywhere.popup/46.27.1874.1053/1920.0.1920.1080@46.27.1874.1053" timestamp="1606426667869" />
     <state x="646" y="259" width="672" height="678" key="search.everywhere.popup/46.27.1874.1053@46.27.1874.1053" timestamp="1605292538853" />
   </component>
 </project>
