@@ -15,7 +15,6 @@ use Symfony\Component\Routing\Annotation\Route;
  * Class ComentarioController
  * @package App\Controller
  *
- * @Route("/api")
  */
 class ComentarioController extends AbstractController
 {
@@ -45,7 +44,7 @@ class ComentarioController extends AbstractController
      * @param $id
      * @return JsonResponse
      * @throws \Exception
-     * @Route("/comentarios/{id}", name="getAllComentariosUsuario", methods={"POST"})
+     * @Route("/api/comentarios/{id}", name="getAllComentariosUsuario", methods={"POST"})
      */
     public function getComentariosUsuario($id): JsonResponse
     {
@@ -98,7 +97,7 @@ class ComentarioController extends AbstractController
      * @param Request $request
      * @return JsonResponse
      * @throws \Exception
-     * @Route("/anadir-comentario", name="addComentario", methods={"POST"})
+     * @Route("/api/anadir-comentario", name="addComentario", methods={"POST"})
      */
     public function addComentario(Request $request): JsonResponse
     {
@@ -152,7 +151,7 @@ class ComentarioController extends AbstractController
      * @param $id
      * @return JsonResponse
      * @throws \Exception
-     * @Route("/comentario/{id}", name="updateComentario", methods={"PUT"})
+     * @Route("/api/comentario/{id}", name="updateComentario", methods={"PUT"})
      */
     public function updatePublicacion(Request $request, $id): JsonResponse
     {
@@ -195,7 +194,7 @@ class ComentarioController extends AbstractController
      * @param $id
      * @return JsonResponse
      * @throws \Exception
-     * @Route("/comentario/{id}", name="deleteComentario", methods={"DELETE"})
+     * @Route("/api/comentario/{id}", name="deleteComentario", methods={"DELETE"})
      */
     public function deletePublicacion($id)
     {

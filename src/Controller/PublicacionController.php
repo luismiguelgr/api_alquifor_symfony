@@ -16,7 +16,6 @@ use Symfony\Component\Validator\Constraints\DateTime;
  * Class PublicacionController
  * @package App\Controller
  *
- * @Route("/api")
  */
 
 class PublicacionController extends AbstractController
@@ -54,7 +53,7 @@ class PublicacionController extends AbstractController
      * @param $id
      * @return JsonResponse
      * @throws \Exception
-     * @Route("/publicaciones/{id}", name="getAllPublicacionesUsuario", methods={"POST"})
+     * @Route("/api/publicaciones/{id}", name="getAllPublicacionesUsuario", methods={"POST"})
      */
     public function getPublicacionesUsuario($id): JsonResponse
     {
@@ -121,7 +120,7 @@ class PublicacionController extends AbstractController
      * @param Request $request
      * @return JsonResponse
      * @throws \Exception
-     * @Route("/anadir-publicacion", name="addPublicacion", methods={"POST"})
+     * @Route("/api/anadir-publicacion", name="addPublicacion", methods={"POST"})
      */
     public function addPublicacion(Request $request): JsonResponse
     {
@@ -174,7 +173,7 @@ class PublicacionController extends AbstractController
      * @param $id
      * @return JsonResponse
      * @throws \Exception
-     * @Route("/publicacion/{id}", name="updatePublicacion", methods={"PUT"})
+     * @Route("/api/publicacion/{id}", name="updatePublicacion", methods={"PUT"})
      */
     public function updatePublicacion(Request $request, $id): JsonResponse
     {
@@ -219,7 +218,7 @@ class PublicacionController extends AbstractController
      * @param $id
      * @return JsonResponse
      * @throws \Exception
-     * @Route("/publicacion/{id}", name="deletePublicacion", methods={"DELETE"})
+     * @Route("/api/publicacion/{id}", name="deletePublicacion", methods={"DELETE"})
      */
     public function deletePublicacion($id)
     {

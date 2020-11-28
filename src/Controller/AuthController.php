@@ -6,6 +6,7 @@ use Lexik\Bundle\JWTAuthenticationBundle\Services\JWTTokenManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -47,11 +48,18 @@ class AuthController extends ApiController
      * @param UserInterface $user
      * @param JWTTokenManagerInterface $JWTManager
      * @return JsonResponse
-     * @Route("/api/login_check", name="api_login_check", methods={"POST"})
+     * @Route("/login_check", name="api_login_check", methods={"POST"})
      */
     public function getTokenUser(UserInterface $user, JWTTokenManagerInterface $JWTManager)
     {
-        return new JsonResponse(['token' => $JWTManager->create($user)]);
+        $em = $this->getDoctrine()->getManager();
+        $usuario = $em->getRepository(Usuario::class)->findOneBy(['email'=>$user->getUsername()]);
+        $data []= [
+            'token' => $JWTManager->create($user),
+            'usuario' => $usuario->getUsername()
+        ];
+//        return new JsonResponse(['token' => $JWTManager->create($user), ]);
+        return new JsonResponse($data, Response::HTTP_OK);
     }
 
 }

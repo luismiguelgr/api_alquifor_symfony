@@ -14,7 +14,6 @@ use Symfony\Component\Routing\Annotation\Route;
  * Class UsuarioController
  * @package App\Controller
  *
- * @Route("/api")
  */
 
 class UsuarioController extends AbstractController
@@ -22,7 +21,7 @@ class UsuarioController extends AbstractController
     /**
      * @return JsonResponse
      * @throws \Exception
-     * @Route("/usuarios", name="getAllUsuarios", methods={"GET"})
+     * @Route("/api/usuarios", name="getAllUsuarios", methods={"GET"})
      */
     public function getUsuarios(): JsonResponse
     {
@@ -46,7 +45,7 @@ class UsuarioController extends AbstractController
      * @param $id
      * @return JsonResponse
      * @throws \Exception
-     * @Route("/usuario/{id}", name="getUsuario", methods={"GET"})
+     * @Route("/api/usuario/{id}", name="getUsuario", methods={"GET"})
      */
     public function getUsuario($id): JsonResponse
     {
@@ -151,7 +150,7 @@ class UsuarioController extends AbstractController
      * @param $id
      * @return JsonResponse
      * @throws \Exception
-     * @Route("/usuario/{id}", name="updateUsuario", methods={"PUT"})
+     * @Route("/api/usuario/{id}", name="updateUsuario", methods={"PUT"})
      */
     public function updateUsuario(Request $request, $id): JsonResponse
     {
@@ -205,7 +204,7 @@ class UsuarioController extends AbstractController
      * @param $id
      * @return JsonResponse
      * @throws \Exception
-     * @Route("/usuario/{id}", name="deleteUsuario", methods={"DELETE"})
+     * @Route("/api/usuario/{id}", name="deleteUsuario", methods={"DELETE"})
      */
     public function deleteUsuario($id)
     {
