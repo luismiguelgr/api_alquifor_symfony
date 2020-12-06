@@ -24,10 +24,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ae90d4cd-55b2-4eba-9c58-09ff32cfac22" name="Default Changelist" comment="funcionando jwt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ComentarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ComentarioController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/PublicacionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PublicacionController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/UsuarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UsuarioController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -201,7 +198,11 @@
       <workItem from="1606402651966" duration="4000" />
       <workItem from="1606422022031" duration="2176000" />
       <workItem from="1606492807689" duration="9217000" />
-      <workItem from="1606576974176" duration="3593000" />
+      <workItem from="1606576974176" duration="4210000" />
+      <workItem from="1606672307138" duration="670000" />
+      <workItem from="1606760036903" duration="6608000" />
+      <workItem from="1607073766642" duration="2000" />
+      <workItem from="1607182932892" duration="658000" />
     </task>
     <task id="LOCAL-00001" summary="Valores devueltos de publicaciones">
       <created>1605461201455</created>
@@ -261,9 +262,10 @@
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
     <state x="46" y="27" width="918" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/46.27.1874.1053/1920.0.1920.1080@46.27.1874.1053" timestamp="1606508432732" />
-    <state x="716" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605436091312">
-      <screen x="46" y="27" width="1874" height="1053" />
+    <state x="2606" y="291" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606763267578">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
+    <state x="2606" y="291" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/46.27.1874.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1606763267578" />
     <state x="716" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/46.27.1874.1053/1920.0.1920.1080@46.27.1874.1053" timestamp="1605436091312" />
     <state x="719" y="395" width="518" height="324" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1605372063182">
       <screen x="46" y="27" width="3794" height="1053" />
@@ -283,10 +285,10 @@
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
     <state x="578" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/46.27.1874.1053/1920.0.1920.1080@46.27.1874.1053" timestamp="1606511603408" />
-    <state x="455" y="234" width="1100" height="522" key="find.popup" timestamp="1606580635850">
-      <screen x="46" y="27" width="1874" height="1053" />
+    <state x="2339" y="212" width="1128" height="622" key="find.popup" timestamp="1606766441495">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2339" y="212" width="1128" height="536" key="find.popup/46.27.1874.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605897115491" />
+    <state x="2339" y="212" width="1128" height="622" key="find.popup/46.27.1874.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1606766441495" />
     <state x="455" y="234" width="1100" height="522" key="find.popup/46.27.1874.1053/1920.0.1920.1080@46.27.1874.1053" timestamp="1606580635850" />
     <state x="647" y="252" key="run.anything.popup" timestamp="1605435707171">
       <screen x="46" y="27" width="1874" height="1053" />

@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 /**
  * Class UsuarioController
@@ -69,12 +70,48 @@ class UsuarioController extends AbstractController
     }
 
     /**
+     * @param $email
+     * @return JsonResponse
+     * @throws \Exception
+     * @Route("/api/usuario/{email}", name="getUsuarioPorEmail", methods={"POST"})
+     */
+    public function getUsuarioPorEmail($email): JsonResponse
+    {
+        $usuario = $this->getDoctrine()->getRepository(Usuario::class)->findOneBy(array('email' => $email));
+        if(!$usuario){
+            $data=[
+                'status' => 404,
+                'error' => "Usuario no encontrado"
+            ];
+            return $this->response($data,404);
+        }else {
+            $data = [
+                'id' => $usuario->getId(),
+                'email' => $usuario->getEmail(),
+                'usuario' => $usuario->getUsuario(),
+                'nombre' => $usuario->getNombre(),
+                'primer_apellido' => $usuario->getPrimerApellido(),
+                'segundo_apellido' => $usuario->getSegundoApellido(),
+//                'fecha_nacimiento' => $usuario->getFechaNacimiento()->format("Y-m-d H:m:s"),
+//                'direccion' => $usuario->getDireccion(),
+//                'ciudad' => $usuario->getCiudad(),
+//                'provincia' => $usuario->getProvincia(),
+//                'codigo_postal' => $usuario->getCodigoPostal(),
+//                'telefono' => $usuario->getTelefono()
+            ];
+
+            return $this->response($data, 200);
+        }
+    }
+
+    /**
      * @param Request $request
+     * @param UserPasswordEncoderInterface $encoder
      * @return JsonResponse
      * @throws \Exception
      * @Route("/anadir-usuario", name="addUsuario", methods={"POST"})
      */
-    public function addUsuario(Request $request): JsonResponse
+    public function addUsuario(Request $request, UserPasswordEncoderInterface $encoder): JsonResponse
     {
 
         try {
@@ -106,7 +143,7 @@ class UsuarioController extends AbstractController
 
             $usuario = new Usuario();
             empty($request->get('usuario')) ? "" : $usuario->setUsuario($request->get('usuario'));
-            empty($request->get('password')) ? "" : $usuario->setPassword($request->get('password'));
+            empty($request->get('password')) ? "" : $usuario->setPassword($encoder->encodePassword($usuario, $request->get('password')));
             empty($request->get('email')) ? "" : $usuario->setEmail($request->get('email'));
             empty($request->get('nombre')) ? "" : $usuario->setNombre($request->get('nombre'));
             empty($request->get('primer_apellido')) ? "" : $usuario->setPrimerApellido($request->get('primer_apellido'));
@@ -120,6 +157,7 @@ class UsuarioController extends AbstractController
 //            empty($request->get('imagen')) ? true : $usuario->setImagen($request->get('imagen'));
             $usuario->setImagen("");
             $usuario->setTipoPerfil(1);
+            $usuario->setRoles(['ROLE_USER']);
 
             $this->getDoctrine()->getRepository(Usuario::class)->addUsuario($usuario);
             $data = [
